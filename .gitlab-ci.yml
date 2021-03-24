@@ -1,0 +1,15 @@
+build:
+	script: cd UnitTests && make tests
+	stage: build
+	tags:
+		- csc340
+	artifacts:
+		paths:
+			[UnitTests/tests]
+
+		test:
+			script: UnitTests/tests
+			stage: test
+			tags:
+				- csc340
+			needs: [build]
