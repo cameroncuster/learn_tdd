@@ -7,9 +7,9 @@ build:
 		paths:
 			[UnitTests/tests]
 
-		test:
-			script: UnitTests/tests
-			stage: test
-			tags:
-				- csc340
-			needs: [build]
+test:
+	script: UnitTests/tests
+	stage: test
+	tags:
+		- csc340
+	needs: [build]
