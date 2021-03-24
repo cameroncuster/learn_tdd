@@ -16,6 +16,6 @@ Point Point::operator-(const Point & rhs) const
 
 double Point::distance(const Point &p) const
 {
-   return sqrt(pow(xLoc - p.zLoc, 2) + pow(yLoc - p.yLoc, 2) +
-          pow(xLoc - p.zLoc, 2));
+   return sqrt(pow(xLoc - p.xLoc, 2) + pow(yLoc - p.yLoc, 2) +
+          pow(zLoc - p.zLoc, 2));
 }

@@ -3,7 +3,7 @@
  ***********************************************************************/
 #include "ellipsoid.h"
 
-Ellipsoid::Ellipsoid(Point &p, double x, double y, double z) : Shape3d(p, "Ellipsoid"), xrad(x), yrad(x), zrad(z) {}
+Ellipsoid::Ellipsoid(Point &p, double x, double y, double z) : Shape3d(p, "Ellipsoid"), xrad(x), yrad(y), zrad(z) {}
 
 bool Ellipsoid::contains(const Point &p) const
 {

@@ -6,10 +6,10 @@ bool Prism::contains(const Point &p) const
 {
    return (fabs(location.xLoc-p.xLoc) <= xdim / 2.0 &&
         fabs(location.yLoc-p.yLoc) <= ydim / 2.0 &&
-        fabs(location.zLoc-p.zLoc) <= ydim / 2.0);
+        fabs(location.zLoc-p.zLoc) <= zdim / 2.0);
 }
 
 double Prism::volume() const
 {
-   return xdim * ydim * zdim * zdim;
+   return xdim * ydim * zdim;
 }
