@@ -1,13 +1,15 @@
-job 1:
-    tags: CSC340
-    stage: build
-    script: cd UnitTests && make tests
-    artifacts:
-        paths:
-            [UnitTests/tests]
+build:
+	script: cd UnitTests && make tests
+	stage: build
+	tags:
+		- CSC340
+	artifacts:
+		paths:
+			[UnitTests/tests]
 
-job 2:
-    tags: CSC340
-    stage: test
-    needs: [build]
-    script: UnitTests/tests
+test:
+	script: UnitTests/tests
+	stage: test
+	tags:
+		- CSC340
+	needs: [build]
