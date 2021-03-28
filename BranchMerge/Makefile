@@ -24,12 +24,13 @@ SOURCE_TEST = testMain.cpp \
 			  testCasesPrism.cpp \
 			  testCasesSphere.cpp \
 			  testCasesEllipsoid.cpp \
+			  shape3d.cpp \
+			  shape3dTest.cpp \
 			  cube.cpp \
 			  ellipsoid.cpp \
 			  point.cpp \
 			  pointTest.cpp \
 			  prism.cpp \
-			  shape3d.cpp \
 			  sphere.cpp
 
 OBJS = $(SOURCE:.cpp=.o)
