@@ -1,14 +1,14 @@
 build:
-  script: cd UnitTests && make tests
+  script: cd BranchMerge && make tests
   stage: build
   tags:
     - csc340
   artifacts:
     paths:
-      [UnitTests/tests]
+      [BranchMerge/tests]
 
 test:
-  script: UnitTests/tests
+  script: BranchMerge/tests
   stage: test
   tags:
     - csc340
