@@ -13,8 +13,8 @@ using namespace std;
 // Remember your interval notation!
 Point genPoint()
 {
-   Point p((double)rand()/RAND_MAX, 
-           (double)rand()/RAND_MAX, 
+   Point p((double)rand()/RAND_MAX,
+           (double)rand()/RAND_MAX,
            (double)rand()/RAND_MAX);
    return p;
 }
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 {
    int pointsContained = 0;
    int numPoints = POINTS_TO_GENERATE;
-   if (argc > 1) 
+   if (argc > 1)
    {
       string str(argv[1]);
       numPoints = stoi(str);

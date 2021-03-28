@@ -10,12 +10,12 @@ using namespace std;
 // By default use 10 million points to approximate volume
 #define POINTS_TO_GENERATE 10000000
 
-// This will generate a random point ([0.0,1.0], [0.0,1.0], [0.0,1.0])
+// Generate a point ([0.0,1.0], [0.0,1.0], [0.0,1.0])
 // Remember your interval notation!
 Point genPoint()
 {
-   Point p((double)rand()/RAND_MAX, 
-           (double)rand()/RAND_MAX, 
+   Point p((double)rand()/RAND_MAX,
+           (double)rand()/RAND_MAX,
            (double)rand()/RAND_MAX);
    return p;
 }
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
    int numPoints = POINTS_TO_GENERATE;
 
    // If the user enters number of points on command line, use that
-   if (argc > 1) 
+   if (argc > 1)
    {
       string str(argv[1]);
       numPoints = stoi(str);

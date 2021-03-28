@@ -1,4 +1,4 @@
-#include "../catch/catch.hpp"
+#include "../catch.hpp"
 #include "point.h"
 #include "pointTest.h"
 #include "cube.h"

@@ -6,35 +6,6 @@ SOURCE = cube.cpp \
 		 shape3d.cpp \
 		 sphere.cpp
 
-CAM_TEST_OBJS = cube.cpp \
-			cubeTest.cpp \
-			cubeTestCasesCam.cpp \
-			ellipsoid.cpp \
-			ellipsoidTest.cpp \
-			ellipsoidTestCasesCam.cpp \
-			point.cpp \
-			pointTest.cpp \
-			pointTestCasesCam.cpp \
-			prism.cpp \
-			prismTest.cpp \
-			prismTestCasesCam.cpp \
-			shape3d.cpp \
-			shape3dTest.cpp \
-			sphere.cpp \
-			sphereTest.cpp \
-			sphereTestCasesCam.cpp \
-			unitTestTools.cpp \
-			testMain.cpp
-
-RAY_TEST_OBJS = cube.cpp \
-			ellipsoid.cpp \
-			point.cpp \
-			prism.cpp \
-			shape3d.cpp \
-			sphere.cpp \
-			rayTestCase.cpp\
-			testMain.cpp
-
 TESTS_OBJS = cube.cpp \
 			cubeTest.cpp \
 			cubeTestCasesCam.cpp \
@@ -53,7 +24,6 @@ TESTS_OBJS = cube.cpp \
 			sphereTest.cpp \
 			sphereTestCasesCam.cpp \
 			unitTestTools.cpp \
-			rayTestCase.cpp\
 			testMain.cpp
 
 OBJS = $(SOURCE:.cpp=.o)
@@ -73,25 +43,18 @@ LIBS =
 
 .PHONY: clean
 
-# Targets include all, clean, debug, tar, tests-cam, tests-ray
+# Targets include all, tests, clean, debug, tar
 
 all : main
 
 main: $(OBJS)
 	$(LINK) -o $@ $^ $(LIBS)
 
-tests-cam: $(CAM_TEST_OBJS)
-	$(LINK) -o $@ $^ $(LIBS)
-
-tests-ray: $(RAY_TEST_OBJS)
-	$(LINK) -o $@ $^ $(LIBS)
-
 tests: $(TESTS_OBJS)
 	$(LINK) -o $@ $^ $(LIBS)
 
-
 clean:
-	rm -rf *.o *.d core main tests tests-cam tests-ray
+	rm -rf *.o *.d core main tests
 
 debug: CXXFLAGS = -DDEBUG -g -std=c++11
 debug: main
@@ -103,8 +66,6 @@ help:
 	@echo "	make main       - same as make all"
 	@echo "	make all        - builds the main target"
 	@echo " make tests      - builds complete test suite"
-	@echo "	make tests-cam  - builds Cam's test suite"
-	@echo " make tests-ray  - builds Ray's test suite"
 	@echo "	make            - same as make all"
 	@echo "	make clean      - remove .o .d core main tests-cam tests-ray"
 	@echo "	make debug      - make all with -g and -DDEBUG"
@@ -115,4 +76,3 @@ help:
 
 %.d: %.cpp
 	@set -e; rm -rf $@;$(GCC) -MM $< $(CXXFLAGS) > $@
-
