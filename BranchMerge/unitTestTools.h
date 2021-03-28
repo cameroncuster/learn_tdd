@@ -2,6 +2,7 @@
 #include "point.h"
 #include "pointTest.h"
 #include "cube.h"
+#include "cubeTest.h"
 #include "ellipsoid.h"
 #include "prism.h"
 #include "sphere.h"

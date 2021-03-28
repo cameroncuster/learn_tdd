@@ -27,6 +27,7 @@ SOURCE_TEST = testMain.cpp \
 			  shape3d.cpp \
 			  shape3dTest.cpp \
 			  cube.cpp \
+			  cubeTest.cpp \
 			  ellipsoid.cpp \
 			  point.cpp \
 			  pointTest.cpp \
