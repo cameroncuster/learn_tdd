@@ -27,6 +27,7 @@ SOURCE_TEST = testMain.cpp \
 			  cube.cpp \
 			  ellipsoid.cpp \
 			  point.cpp \
+			  pointTest.cpp \
 			  prism.cpp \
 			  shape3d.cpp \
 			  sphere.cpp
