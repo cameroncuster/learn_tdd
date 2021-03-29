@@ -1,4 +1,4 @@
-#include "catch.hpp"
+#include "../catch.hpp"
 #include "point.h"
 #include "shape3d.h"
 #include "prism.h"
